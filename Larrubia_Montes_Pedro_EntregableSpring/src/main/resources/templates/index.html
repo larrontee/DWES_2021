@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+img{
+width:200px;
+}
+</style>
+</head>
+<body>
+	<h1>INDEX</h1>
+	<header th:insert="fragments/parts::menu"></header>
+	<img sec:authorize="!isAuthenticated()" alt="" src="/img/bienvenido.png">
+	<img sec:authorize="hasRole('ROLE_ADMIN')" alt="" src="/img/admin.png">
+	<img sec:authorize="hasRole('ROLE_USER')" alt="" src="/img/user.png">
+	</body>
+</html>	
+
